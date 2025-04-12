@@ -1,0 +1,134 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('imagen.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  background: rgba(26, 26, 46, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+/* Header styles */
+header {
+  margin-bottom: 20px;
+}
+
+header img {
+  width: 80px;
+  animation: spin 3s linear;
+  animation-iteration-count: 1; /* Detener giro después de una vuelta */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #f0f0f0;
+}
+
+/* Keyframes for spinning logo */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Main styles */
+main {
+  margin: 20px 0;
+}
+
+.conversion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conversion label {
+  font-size: 0.9em;
+  text-align: left;
+}
+
+input, select, button {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+}
+
+input, select {
+  background: #1A1A2E;
+  color: white;
+}
+
+button {
+  background: #4a47a3;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #6a61d7;
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.icon-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: #1A1A2E;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.icon-btn img {
+  width: 40px;
+  height: 40px;
+}
+
+.icon-btn:hover {
+  background: #44426e;
+  transform: scale(1.1);
+}
+
+/* Responsive design for mobile and tablet */
+@media (max-width: 768px) {
+  .app {
+    margin: 5px; /* Margen de 5 píxeles en dispositivos pequeños */
+  }
+}

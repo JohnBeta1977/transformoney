@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TransforMoney: Conversor de monedas moderno y funcional con soporte PWA">
+  <meta name="theme-color" content="#1A1A2E">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="TransforMoney">
+  <meta name="application-name" content="TransforMoney">
+  <meta name="msapplication-TileColor" content="#1A1A2E">
+  <meta name="msapplication-TileImage" content="logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <title>TransforMoney</title>
+</head>
+<body>
+  <div class="app-container">
+    <div class="app">
+      <header>
+        <img src="logo.png" alt="TransforMoney Logo" id="app-logo">
+        <h1>TransforMoney</h1>
+      </header>
+      <main>
+        <div class="conversion">
+          <label for="currency-from">De:</label>
+          <select id="currency-from"></select>
+          <label for="amount">Cantidad:</label>
+          <input type="number" id="amount" placeholder="Cantidad">
+          <label for="currency-to">A:</label>
+          <select id="currency-to"></select>
+          <button id="convert-btn">Convertir</button>
+        </div>
+        <div id="history">
+          <h2>Historial de conversiones</h2>
+          <ul id="history-list"></ul>
+        </div>
+      </main>
+      <footer>
+        <button id="share-btn" class="icon-btn">
+          <img src="share-icon.png" alt="Compartir">
+        </button>
+        <button id="linkedin-btn" class="icon-btn">
+          <img src="linkedin.png" alt="LinkedIn">
+        </button>
+        <button id="github-btn" class="icon-btn">
+          <img src="github.png" alt="GitHub">
+        </button>
+      </footer>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
