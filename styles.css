@@ -27,6 +27,7 @@ body {
   max-width: 400px;
   width: 90%;
   text-align: center;
+  margin-top: 5px;
 }
 
 /* Header styles */
@@ -130,5 +131,12 @@ footer {
 @media (max-width: 768px) {
   .app {
     margin: 5px; /* Margen de 5 píxeles en dispositivos pequeños */
+  }
+}
+
+/* Ocultar barra de navegación en móviles y tablets */
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
   }
 }

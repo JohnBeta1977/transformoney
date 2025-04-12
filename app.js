@@ -1,3 +1,29 @@
+// Registrar Service Worker
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js').then(() => {
+    console.log('Service Worker registrado.');
+  });
+}
+
+// Manejar instalación de la PWA
+window.addEventListener('beforeinstallprompt', event => {
+  event.preventDefault();
+  const installPrompt = event;
+  const installButton = document.createElement('button');
+  installButton.textContent = 'Instalar TransforMoney';
+  installButton.classList.add('install-btn');
+  document.body.appendChild(installButton);
+
+  installButton.addEventListener('click', () => {
+    installPrompt.prompt();
+    installPrompt.userChoice.then(choice => {
+      if (choice.outcome === 'accepted') {
+        console.log('PWA instalada.');
+      }
+      installButton.remove();
+    });
+  });
+});
 // Botón Compartir
 document.getElementById('share-btn').addEventListener('click', () => {
   if (navigator.share) {
